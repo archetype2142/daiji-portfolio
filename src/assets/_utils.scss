@@ -1,0 +1,235 @@
+@import "~bulma/sass/utilities/_all";
+
+$daiji-white: #fff;
+
+$daiji: (
+
+  "purple-10": #B6ADAE,
+  "purple-20": #BB8A89,
+  "purple-30": #B48383,
+  "purple-40": #AC7B7D,
+  "purple-50": #A27787,
+  "purple-60": #977390,
+  "purple-70": #88648D,
+  "purple-80": #785589,
+  
+  "blue-10": #B0D0D3,
+  "blue-20": #BED8DB,
+  "blue-30": #B7D4D7,
+  "blue-40": #B0D0D3,
+  "blue-50": #B0D0D3,
+  "blue-60": #B0D0D3,
+  "blue-70": #B0D0D3,
+  "blue-80": #B0D0D3,
+  "darkgreen": #0D160B
+);
+
+$primary: map-get($daiji, 'purple-80');
+$secondary: map-get($daiji, 'blue-10');
+
+// Set your colors
+$primary-invert: findColorInvert($primary);
+
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+$colors: (
+  "white": ($white, $black),
+  "black": ($black, $white),
+  "light": ($light, $light-invert),
+  "dark": ($dark, $dark-invert),
+  "primary": ($primary, $primary-invert),
+  "info": ($info, $info-invert),
+  "success": ($success, $success-invert),
+  "warning": ($warning, $warning-invert),
+  "danger": ($danger, $danger-invert),
+);
+
+// Links
+$link: $primary;
+$link-invert: $primary-invert;
+$link-focus-border: $primary;
+// Bulma has no offset 0
+@include mobile {
+  .column.is-offset-0-mobile {
+    margin-left: 0;
+  }
+}
+
+@include tablet {
+  .column.is-offset-0-tablet {
+    margin-left: 0;
+  }
+}
+
+@include touch {
+  .column.is-offset-0-touch {
+    margin-left: 0;
+  }
+}
+
+@include desktop {
+  .column.is-offset-0-desktop {
+    margin-left: 0;
+  }
+}
+
+@include widescreen {
+  .column.is-offset-0-widescreen {
+    margin-left: 0;
+  }
+}
+
+@include fullhd {
+  .column.is-offset-0-fullhd {
+    margin-left: 0;
+  }
+}
+
+@each $i in 0, 3, 4, 6, 9 {
+  .has-radius-#{$i} { border-radius: #{$i}px; }
+
+  .has-radius-bottom-#{$i} {
+    border-bottom-left-radius: #{$i}px;
+    border-bottom-right-radius: #{$i}px;
+  }
+
+  .has-radius-top-#{$i} {
+    border-top-left-radius: #{$i}px;
+    border-top-right-radius: #{$i}px;
+  }
+}
+
+@each $i in 3, 4, 5, 6, 9, 12, 18, 24, 36, 48, 60, 72, 96, 120, 180, 240, 0 {
+  .has-pb-#{$i} { padding-bottom: #{$i}px !important; }
+  .has-pt-#{$i} { padding-top: #{$i}px !important; }
+  .has-pr-#{$i} { padding-right: #{$i}px !important; }
+  .has-pl-#{$i} { padding-left: #{$i}px !important; }
+  .has-padding-#{$i} { padding: #{$i}px !important; }
+  .has-mb-#{$i} { margin-bottom: #{$i}px !important; }
+  .has-mt-#{$i} { margin-top: #{$i}px !important; }
+  .has-mr-#{$i} { margin-right: #{$i}px !important; }
+  .has-ml-#{$i} { margin-left: #{$i}px !important; }
+  .has-margin-#{$i} { margin: #{$i}px !important; }
+}
+
+@each $i in 3, 4, 5, 6, 9, 12, 18, 24, 36, 48, 60, 72, 96, 120, 180, 240, 0 {
+  @include mobile {
+    .has-pb-#{$i}-mobile { padding-bottom: #{$i}px !important; }
+    .has-pt-#{$i}-mobile { padding-top: #{$i}px !important; }
+    .has-pr-#{$i}-mobile { padding-right: #{$i}px !important; }
+    .has-pl-#{$i}-mobile { padding-left: #{$i}px !important; }
+    .has-padding-#{$i}-mobile { padding: #{$i}px !important; }
+    .has-mb-#{$i}-mobile { margin-bottom: #{$i}px !important; }
+    .has-mt-#{$i}-mobile { margin-top: #{$i}px !important; }
+    .has-mr-#{$i}-mobile { margin-right: #{$i}px !important; }
+    .has-ml-#{$i}-mobile { margin-left: #{$i}px !important; }
+    .has-margin-#{$i}-mobile { margin: #{$i}px !important; }
+  }
+}
+
+@each $i in 3, 4, 5, 6, 9, 12, 18, 24, 36, 48, 60, 72, 96, 120, 180, 240, 0 {
+  @include tablet {
+    .has-pb-#{$i}-tablet { padding-bottom: #{$i}px !important; }
+    .has-pt-#{$i}-tablet { padding-top: #{$i}px !important; }
+    .has-pr-#{$i}-tablet { padding-right: #{$i}px !important; }
+    .has-pl-#{$i}-tablet { padding-left: #{$i}px !important; }
+    .has-padding-#{$i}-tablet { padding: #{$i}px !important; }
+    .has-mb-#{$i}-tablet { margin-bottom: #{$i}px !important; }
+    .has-mt-#{$i}-tablet { margin-top: #{$i}px !important; }
+    .has-mr-#{$i}-tablet { margin-right: #{$i}px !important; }
+    .has-ml-#{$i}-tablet { margin-left: #{$i}px !important; }
+    .has-margin-#{$i}-tablet { margin: #{$i}px !important; }
+  }
+}
+
+@each $i in 3, 4, 5, 6, 9, 12, 18, 24, 36, 48, 60, 72, 96, 120, 180, 240, 0 {
+  @include touch {
+    .has-pb-#{$i}-touch { padding-bottom: #{$i}px !important; }
+    .has-pt-#{$i}-touch { padding-top: #{$i}px !important; }
+    .has-pr-#{$i}-touch { padding-right: #{$i}px !important; }
+    .has-pl-#{$i}-touch { padding-left: #{$i}px !important; }
+    .has-padding-#{$i}-touch { padding: #{$i}px !important; }
+    .has-mb-#{$i}-touch { margin-bottom: #{$i}px !important; }
+    .has-mt-#{$i}-touch { margin-top: #{$i}px !important; }
+    .has-mr-#{$i}-touch { margin-right: #{$i}px !important; }
+    .has-ml-#{$i}-touch { margin-left: #{$i}px !important; }
+    .has-margin-#{$i}-touch { margin: #{$i}px !important; }
+  }
+}
+
+.is-borderless {
+  border: 0;
+}
+
+.has-shadow {
+  box-shadow: 0 1px 3px rgba(#1D1A1B, 0.25);
+}
+
+.is-white {
+  color: $daiji-white !important;
+}
+
+.has-bg-white {
+  background: $daiji-white !important;
+}
+
+.has-border-white {
+  border-color: $daiji-white !important;
+}
+
+.has-border-bottom {
+  border-bottom: 1px solid;
+}
+
+.has-border-top {
+  border-top: 1px solid;
+}
+
+.has-border {
+  border: 1px solid;
+}
+
+@each $color in purple, blue {
+  @for $i from 1 through 8 {
+    .is-#{"" + $color}-#{$i * 10} {
+      color: map-get($daiji, $color + '-#{$i * 10}') !important;
+    }
+
+    .is-#{"" + $color}-pop-#{$i * 10} {
+      color: map-get($daiji, $color + '-pop-#{$i * 10}') !important;
+    }
+
+    .has-bg-#{"" + $color}-#{$i * 10} {
+      background-color: map-get($daiji, $color + '-#{$i * 10}') !important;
+    }
+
+    .has-bg-#{"" + $color}-#{$i * 10}-half {
+      background-color: rgba(map-get($daiji, $color + '-#{$i * 10}'), 0.5) !important;
+    }
+
+    .has-bg-#{"" + $color}-pop-#{$i * 10} {
+      background-color: map-get($daiji, $color + '-pop-#{$i * 10}') !important;
+    }
+
+    .has-border-#{"" + $color}-#{$i * 10} {
+      border-color: map-get($daiji, $color + '-#{$i * 10}') !important;
+    }
+
+    .has-border-#{"" + $color}-pop-#{$i * 10} {
+      border-color: map-get($daiji, $color + '-pop-#{$i * 10}') !important;
+    }
+  }
+}
+
+.is-white {
+  color: white !important;
+}
+
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
+
+.container {
+  @include touch {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
